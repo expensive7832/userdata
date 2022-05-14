@@ -1,0 +1,7 @@
+$bg-color:#F2F3F8;
+$btn-submit: #34ACFF;
+@mixin breakpoint($breakpoint){
+    @media(max-width: $breakpoint){
+        @content
+    }
+}

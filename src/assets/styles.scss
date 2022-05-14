@@ -1,0 +1,109 @@
+@import 'variable';
+
+
+.login{
+    border: 20px solid $bg-color;
+    &__inner{
+        height: 100vh;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      @include breakpoint(576px){
+          flex-direction: column;
+      }
+    }
+    &__right{
+        flex: 1;
+        background-image: url('./img/leftcolumn.png');
+        background-size: cover;
+        background-position: center center;
+        background-size: 100% 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include breakpoint(576px){
+            display: none;
+        }
+    }
+    &__content{
+       position: absolute;
+       top: 60%;
+  
+    }
+    &__heading{
+        text-align: center;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+    &__paragraph{
+        text-align: center;
+        max-width: 12vw;
+    }
+    &__left{
+        padding: 3rem;
+        flex: 1;
+        margin: auto;
+    }
+    &__label{
+        display: block;
+        color: #999;
+        &--terms{
+            display: inline;
+            padding-left: .3rem;
+            font-weight: bold;
+        }
+    }
+    &__input{
+        display: block;
+        width: fit-content;
+        padding: .3rem;
+        margin: .7rem 0;
+        &--terms{
+            display: inline;
+            color: #000;
+        }
+    }
+    &__err{
+        color: lighten(red, 20%);
+    }
+    &__btn{
+        margin: 1rem 0;
+       &--submit{
+        background-color: $btn-submit;
+        padding: 1rem 1rem;
+        border: none!important;
+        border-radius: .4rem;
+        color: #fff;
+       }
+
+    }
+    
+}
+
+input{
+    color: #000!important;
+    cursor: pointer;
+    background-color: #fff!important;
+    border-width: 1px;
+    border-radius: .2rem;
+    border-style: inset;
+    border-color: #f2f3f4;
+    border-image: initial;
+    outline: none;
+}
+input:focus{
+    border-color: lightblue;
+}
+
+.chart{
+   display: grid;
+   place-items: center;
+   &__heading--btn{
+       padding: .6rem;
+       background-color: $btn-submit;
+       outline: none;
+       border: none;
+       color: #fff;
+
+   }
+}
